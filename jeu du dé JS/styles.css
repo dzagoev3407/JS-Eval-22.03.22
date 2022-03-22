@@ -1,0 +1,72 @@
+body
+{
+    font-family: 'Lato', sans-serif;
+}
+
+.player__ONE 
+{
+    font-family: 'Lato', sans-serif;
+    padding-top: 8%;
+    margin-left: 285px;
+}
+
+.player__ONE > h1
+{
+    font-size: 4em;
+}
+
+.bi, .bi-plus-circle
+{
+    color: #dc828c;
+}
+
+.text__newGame 
+{
+    font-family: 'Lato', sans-serif;
+    color: #939393;
+    font-style: normal;
+    font-size: 24px;
+    float: right;
+    margin-left: 7px;
+    padding-top: 2px;
+}
+
+.compteurOne
+{
+    padding-top: 4%;
+    margin-left: 371px;
+}
+
+.compteurOne > h3
+{
+    font-family: 'Lato', sans-serif;
+    color: #dc828c;
+    font-size: 4em;
+}
+
+.player__TWO 
+{
+    float: right;
+    font-family: 'Lato', sans-serif;
+    padding-top: 1px;
+    margin-right: 380px;
+}
+
+.player__TWO > h1
+{
+    font-size: 4em;
+}
+
+.compteurTwo
+{
+    padding-top: 1%;
+    margin-right: 501px;
+    float: right;
+}
+
+.compteurTwo > h3
+{
+    font-family: 'Lato', sans-serif;
+    color: #dc828c;
+    font-size: 4em;
+}
