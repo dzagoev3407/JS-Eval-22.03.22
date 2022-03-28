@@ -20,6 +20,7 @@ btnNewGame.addEventListener('click', function() {
 
 let compteurOne = document.getElementById('compteur__ONE')
 let btnAdd = document.getElementById('addOne')
+let namePlayer = 'Player 1'
 
 /* Stylisation du compteur */
 
@@ -31,19 +32,19 @@ $(compteurOne).css('margin-left', '340px')
 
 compteurOne = 0;
 
-btnAdd.addEventListener('click', function() {
-  for(compteurOne = 0; compteurOne < 10; compteurOne++) {
-      document.getElementById('compteur__ONE').innerHTML = 'Le joueur 1 a ' + compteurOne + ' points.'
-  } // Quand on clique sur ce bouton on ajoute +1
 
-  if(compteurOne === 10) {
-      document.getElementById('compteur__ONE').innerHTML = 'Le joueur 1 a ' + compteurOne + ' points.'
-      alert('Le joueur 1 a gagné la partie !') // Quand le joueur 1 a 10 points il gagne la partie.
-  }else if(compteurOne !== 10) {
-      document.getElementById('compteur__ONE').innerHTML = 'Le joueur 1 n\'a pas gagné la partie '
-      alert('Le joueur 1 a perdu la partie') // Quand le joueur 1 a un nombre de points points différent de 10 il perd la partie.
-  }
-})
+btnAdd.addEventListener('click', function comptage() {
+    for(compteurOne = 0 ; compteurOne < 10; compteurOne++) {
+         let textCompteurOne = ('Nombre de points de ' + namePlayer + ' est ' + compteurOne + ' pts.')
+         document.write(textCompteurOne.innerHTML = ('Nombre de points de ' + namePlayer + ' est ' + compteurOne + ' pts.'))
+        } // Affiche le nombre de points du Player 1
+
+    if(compteurTwo == 9) {
+        console.log('Player 1 a gagné la partie !')
+    }else {
+        console.log('Player 1 a perdu la partie !')
+      }
+    })
 
 /* ======================================================== */
 
@@ -52,6 +53,7 @@ btnAdd.addEventListener('click', function() {
 let compteurTwo = document.getElementById('compteur__TWO')
 let btnAddTWO = document.getElementById('addTwo')
 let clicPts = document.getElementById('clicPts')
+let namePlayerTwo = 'Player 2'
 
 /* Stylisation du compteur */
 
@@ -59,15 +61,19 @@ $(compteurTwo).css('color', '#dc828c')
 $(compteurTwo).css('font-size', '34px')
 $(compteurTwo).css('margin-left', '178px')
 
-compteurTwo = 0;
+let resultCompteurTwo = "";
 
 btnAddTWO.addEventListener('click', function comptage() {
-    compteurTwo++;
-    clicPts.textContent = comptage
-})
-   if(clicPts === 10) {
-       alert('Le joueur 2 à gagné la partie !')
-   }
+    for(compteurTwo = 0 ; compteurTwo < 10; compteurTwo++) {
+        let textCompteurOne = ('Nombre de points de ' + namePlayerTwo + ' est ' + compteurTwo + ' pts.')
+        document.write(textCompteurOne.innerHTML = ('Nombre de points de ' + namePlayerTwo + ' est ' + compteurTwo + ' pts.'))
+        } // 
+    if(compteurTwo == 9) {
+        console.log('Player 2 a gagné la partie !')
+    }else {
+        console.log('Player 2 a perdu la partie !')
+      } // Affiche le nombre de points du Player 2
+    })
 
   /* ============================
       Partie dé
@@ -90,7 +96,7 @@ btnAddTWO.addEventListener('click', function comptage() {
       console.log(resultat);
       console.log(de.value);
       if (resultat == 1) {
-          textMessage.innerHTML = " Pas de chance ! Ahahaha !";
+          textMessage.innerHTML = " Pas chanceux !";
       }
       else {
           textMessage.innerHTML = "";

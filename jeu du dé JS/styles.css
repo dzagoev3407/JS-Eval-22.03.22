@@ -70,3 +70,8 @@ body
     color: #dc828c;
     font-size: 4em;
 }
+
+#btnLancer 
+{
+    margin-top: 2%;
+}

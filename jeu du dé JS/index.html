@@ -30,7 +30,7 @@
 			<div class="row align-items-end custom-line">
 				<div class="col">
 					<div class="compteurOne" id="compteur__ONE">
-						<p>Player 2 a <span id="clicPts">0</span> Pts</p>
+						<p>Player 1 a <span id="clicPts">0</span> Pts</p>
                         <button class="btn btn-primary" id="addOne">+ 1</button>
 					</div>
 				</div>
@@ -41,11 +41,14 @@
 					</div>
 				</div>
 			</div>
+			
+			<h2 class="text-center text-primary">Veuillez choisir un mode de jeu :</h2>
+			  <h3 class="text-center text-primary">Deux choix possible, Dé à 4 ou 6</h3>
 
                 <!--Dé-->
 			<select name="des" id="des">
-				<option value="4">d4</option>
-				<option value="6">d6</option>
+				<option value="4" class="text-center">Dé à 4</option>
+				<option value="6" class="text-center">Dé à 6</option>
 			</select> 
                
 			 <div class="text-center">
@@ -56,5 +59,6 @@
             
 		</body>
         <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
+		<script src="responsive.js"></script>
 		<script src="script.js"></script>
 	</html>
