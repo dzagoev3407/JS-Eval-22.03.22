@@ -75,3 +75,73 @@ body
 {
     margin-top: 2%;
 }
+
+@media screen and (max-width: 1280px) {
+    #title__page
+    {
+        font-size: 55px;
+        margin-left: 305px;
+    }
+    .text__newGame
+    {
+        font-size: 52px;
+    }
+
+    .compteurOne > p 
+    {
+        font-size: 72px;
+        margin-left: 4px;
+        margin-right: 3px;
+        float: left;
+    }
+
+    .compteurTwo > p
+    {
+        font-size: 62px;
+        margin-left: 88px;
+        display: inline;
+    } 
+
+    #addOne
+    {
+        margin-left: 134px;
+        font-size: 32px;
+    }
+
+    #addTwo
+    {
+        margin-left: 134px;
+        font-size: 32px;
+    }
+
+    #btnLancer
+    {
+        font-size: 45px;
+    }
+
+    .player__ONE > h1
+    {
+       margin-left: 24px;
+       margin-left: 83px;
+    }
+
+    #text__play
+    {
+        font-size: 57px;
+    }
+
+    #text__play__doce
+    {
+        font-size: 47px;
+    }
+
+    #des
+    {
+        font-size: 37px;
+    }
+
+    #textMessage
+    {
+        font-size: 47px;
+    }
+}
