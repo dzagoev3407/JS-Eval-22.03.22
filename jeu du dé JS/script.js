@@ -21,8 +21,9 @@ btnNewGame.addEventListener('click', function() {
 let compteurOne = document.getElementById('compteur__ONE')
 let btnAdd = document.getElementById('addOne')
 let namePlayer = 'Player 1'
+let clicPts__One = document.getElementById('clicPts__One')
 
-/* Stylisation du compteur */
+/* Stylisation du compteur 1 */
 
 $(compteurOne).css('color', '#FF5C0F')
 $(compteurOne).css('font-size', '34px')
@@ -30,21 +31,20 @@ $(compteurOne).css('margin-left', '340px')
 
 /* Je crée une fonction comptage pour dynamiser le compteur */
 
-compteurOne = 0;
+clicPts__One = 0; // valeur par défaut du compteur 1
 
+/* Création de la fonction pour le compteur 1 */
 
-btnAdd.addEventListener('click', function comptage() {
-    for(compteurOne = 0 ; compteurOne < 10; compteurOne++) {
-         let textCompteurOne = ('Nombre de points de ' + namePlayer + ' est ' + compteurOne + ' pts.')
-         document.write(textCompteurOne.innerHTML = ('Nombre de points de ' + namePlayer + ' est ' + compteurOne + ' pts.'))
-        } // Affiche le nombre de points du Player 1
+function compteurOneInit() {
+    clicPts__One++;
+    document.getElementById('clicPts__One').textContent = clicPts__One
+  if(clicPts__One === 10) {
+      alert('Partie terminée ' + namePlayer + ' a gagné la partie' ) // Quand le joueur 1 a 10 points il remporte la partie
+      location.reload();
+  }
+}
 
-    if(compteurOne == 9) {
-        console.log('Player 1 a gagné la partie !')
-    }else {
-        console.log('Player 1 a perdu la partie !')
-      }
-    })
+btnAdd.addEventListener('click', compteurOneInit) // Quand on clique sur le bouton +1 du compteur un on ajoute +1
 
 /* ======================================================== */
 
@@ -52,29 +52,29 @@ btnAdd.addEventListener('click', function comptage() {
 
 let compteurTwo = document.getElementById('compteur__TWO')
 let btnAddTWO = document.getElementById('addTwo')
-let clicPts = document.getElementById('clicPts')
+let clicPts__Two = document.getElementById('clicPtsTwo')
 let namePlayerTwo = 'Player 2'
 
-/* Stylisation du compteur */
+/* Stylisation du compteur 2 */
 
 $(compteurTwo).css('color', '#0017FF')
 $(compteurTwo).css('font-size', '34px')
 $(compteurTwo).css('margin-left', '178px')
 
-let resultCompteurTwo = "";
+clicPts__Two = 0; // valeur par défaut du compteur 2
 
-btnAddTWO.addEventListener('click', function comptage() {
-    for(compteurTwo = 0 ; compteurTwo < 10; compteurTwo++) {
-        let textCompteurOne = ('Nombre de points de ' + namePlayerTwo + ' est ' + compteurTwo + ' pts.')
-        document.write(textCompteurOne.innerHTML = ('Nombre de points de ' + namePlayerTwo + ' est ' + compteurTwo + ' pts.'))
-        } // 
+/* Création de la fonction pour le compteur 2 */
 
-    if(compteurTwo == 9) {
-        console.log('Player 2 a gagné la partie !')
-    }else {
-        console.log('Player 2 a perdu la partie !')
-      } // Affiche le nombre de points du Player 2
-    })
+function compteurTwoInit() {
+    clicPts__Two++;
+    document.getElementById('clicPtsTwo').textContent = clicPts__Two
+  if(clicPts__Two === 10) {
+      alert('Partie terminée ' + namePlayerTwo + ' a gagné la partie')
+      location.reload(); // Quand arrivé à 10 points on affiche le message en alert et on refresh pour recommencer une nouvelle partie
+  }
+}
+
+btnAddTWO.addEventListener('click', compteurTwoInit) // Quand on clique sur le bouton +1 du compteur un on ajoute +1
 
   /* ============================
       Partie dé
@@ -105,6 +105,8 @@ btnAddTWO.addEventListener('click', function comptage() {
   
       listResultats.appendChild(ul);
   
+      // Image du dé 
+
       let face1 = document.createElement("img");
       face1.setAttribute("src","https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Dice-1-b.svg/1024px-Dice-1-b.svg.png");
       let face2 = document.createElement("img");
@@ -146,7 +148,7 @@ btnAddTWO.addEventListener('click', function comptage() {
               break;
           default:
               newItem.innerHTML = resultat;
-      }
+      } // Ceci affiche les résultats de manière au hassard sur les dé
   
       console.log(resultat);
   

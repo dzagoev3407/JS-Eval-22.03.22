@@ -37,11 +37,6 @@ body
     padding-top: 2px;
 }
 
-button > i
-{
-    display: none;
-}
-
 .compteurOne
 {
     padding-top: 4%;
@@ -110,11 +105,31 @@ button > i
     height: 50px;
 }
 
+#text__play__doce
+{
+    color: #FF5C0F;
+}
+
+footer > h4
+{
+    font-family: 'Lato', sans-serif;
+}
+
 @media screen and (max-width: 1280px) {
     #title__page
     {
         font-size: 55px;
         margin-left: 305px;
+    }
+
+    .card-body > .card-title
+    {
+        font-size: 2em;
+    }
+
+    .card-body > .card-text
+    {
+        font-size: 2em;
     }
     .text__newGame
     {
@@ -129,12 +144,25 @@ button > i
         float: left;
     }
 
+    .compteurOne > span
+    {
+        margin-left: 1px;
+        margin-right: 43px;
+        font-size: 2em;
+    }
+
     .compteurTwo > p
     {
         font-size: 62px;
         margin-left: 88px;
         display: inline;
     } 
+
+    .compteurTwo > span
+    {
+        margin-left: 145px;
+        font-size: 2em;
+    }
 
     #addOne
     {
@@ -167,6 +195,7 @@ button > i
     #text__play__doce
     {
         font-size: 47px;
+        color: #FF5C0F;
     }
 
     #des
@@ -178,4 +207,11 @@ button > i
     {
         font-size: 47px;
     }
+
+    footer > h4 
+    {
+        font-size: 3em;
+        width: 100%;
+    }
+    
 }
