@@ -1,3 +1,26 @@
+/* Les variables du script */
+/* Variable du compteur player 1 */
+let compteurOne = document.getElementById('compteur__ONE');
+let btnAdd = document.getElementById('addOne');
+let namePlayer = 'Player 1';
+let clicPts__One = document.getElementById('clicPts__One');
+
+/* Variable du compteur player 2*/
+
+let compteurTwo = document.getElementById('compteur__TWO');
+let btnAddTWO = document.getElementById('addTwo');
+let clicPts__Two = document.getElementById('clicPtsTwo');
+let namePlayerTwo = 'Player 2';
+
+/* Variable BTN lancer le dé */
+   
+let btnLancer = document.getElementById("btnLancer");
+let listResultats = document.getElementById("listResultats");
+let textMessage = document.getElementById("textMessage");
+let ul = document.createElement("ul");
+let de = document.getElementById("des");
+let resultat = ""; // Variable résultat du dé au hassard
+
 /* Je vérifie si jQuery est bien activé */
 
 $(document).ready(function() {
@@ -15,13 +38,6 @@ btnNewGame.addEventListener('click', function() {
     alert('Vous allez commencer une nouvelle partie.') /* On affiche une alerte indiquant à notre utilisateur qu'une partie va recommencer */
     location.reload();
 })
-
-/* Compteur Player 1 */
-
-let compteurOne = document.getElementById('compteur__ONE')
-let btnAdd = document.getElementById('addOne')
-let namePlayer = 'Player 1'
-let clicPts__One = document.getElementById('clicPts__One')
 
 /* Stylisation du compteur 1 */
 
@@ -48,13 +64,6 @@ btnAdd.addEventListener('click', compteurOneInit) // Quand on clique sur le bout
 
 /* ======================================================== */
 
-/* Compteur Player 2*/
-
-let compteurTwo = document.getElementById('compteur__TWO')
-let btnAddTWO = document.getElementById('addTwo')
-let clicPts__Two = document.getElementById('clicPtsTwo')
-let namePlayerTwo = 'Player 2'
-
 /* Stylisation du compteur 2 */
 
 $(compteurTwo).css('color', '#0017FF')
@@ -80,15 +89,6 @@ btnAddTWO.addEventListener('click', compteurTwoInit) // Quand on clique sur le b
       Partie dé
     =============================
   */
-  /* BTN lancer le dé */
-   
-  let btnLancer = document.getElementById("btnLancer");
-  let listResultats = document.getElementById("listResultats");
-  let textMessage = document.getElementById("textMessage");
-  let ul = document.createElement("ul");
-  let de = document.getElementById("des");
-  
-  let resultat = "";
   
   btnLancer.addEventListener("click",lancer);
   
